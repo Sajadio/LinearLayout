@@ -1,18 +1,129 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context=".MainActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="12dp"
+        android:background="@drawable/round_of_card"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="12dp"
+        android:weightSum="3"
+        tools:ignore="UselessParent">
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:layout_width="@dimen/width_of_image"
+            android:layout_height="@dimen/height_of_image"
+            android:contentDescription=""
+            android:scaleType="centerCrop"
+            android:src="@drawable/img"
+            app:shapeAppearanceOverlay="@style/CircleImageView" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginStart="@dimen/margin_18dp"
+            android:layout_weight="2"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/dm_sans_bold"
+                android:text="@string/name"
+                android:textColor="@color/title"
+                android:textSize="@dimen/size_of_title" />
+
+            <TextView
+                android:id="@+id/jobType"
+                style="@style/TextStyle"
+                android:fontFamily="@font/dm_sans_medium"
+                android:text="@string/jobType" />
+
+            <TextView
+                android:id="@+id/location"
+                style="@style/TextStyle"
+                android:drawablePadding="4dp"
+                android:text="@string/location"
+                android:textColor="@color/subTitle2"
+                app:drawableStartCompat="@drawable/baseline_location_on_24" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:gravity="center">
+
+                <TextView
+                    android:id="@+id/titleReview"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawablePadding="4dp"
+                    android:fontFamily="@font/dm_sans"
+                    android:gravity="center"
+                    android:text="@string/review"
+                    android:textColor="@color/title"
+                    android:textSize="@dimen/size_of_text_subtitle" />
+
+                <TextView
+                    android:id="@+id/reviewRate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:drawablePadding="4dp"
+                    android:fontFamily="@font/dm_sans"
+                    android:gravity="center"
+                    android:text="@string/reviewRate"
+                    android:textColor="@color/title"
+                    android:textSize="@dimen/size_of_text_subtitle"
+                    app:drawableEndCompat="@drawable/baseline_star_24" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="end"
+            android:layout_weight="1"
+            android:gravity="end"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="@dimen/width_container_of_time"
+                android:layout_height="@dimen/height_container_of_time"
+                android:background="@drawable/round_of_chip"
+                android:fontFamily="@font/dm_sans"
+                android:gravity="center"
+                android:text="@string/time"
+                android:textColor="@color/white"
+                android:textSize="@dimen/size_of_text_subtitle"
+                tools:ignore="NestedWeights" />
+
+            <TextView
+                android:id="@+id/country"
+                style="@style/TextStyle"
+                android:fontFamily="@font/dm_sans_medium"
+                android:text="@string/country" />
+
+            <TextView
+                android:id="@+id/days"
+                style="@style/TextStyle"
+                android:text="@string/days"
+                android:textColor="@color/hint" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

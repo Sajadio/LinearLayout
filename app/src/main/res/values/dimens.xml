@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="width_container_of_time">40dp</dimen>
+    <dimen name="height_container_of_time">20dp</dimen>
+    <dimen name="size_of_text_subtitle">12sp</dimen>
+    <dimen name="margin_18dp">8dp</dimen>
+    <dimen name="width_of_image">93dp</dimen>
+    <dimen name="height_of_image">93dp</dimen>
+    <dimen name="size_of_title">16sp</dimen>
+</resources>

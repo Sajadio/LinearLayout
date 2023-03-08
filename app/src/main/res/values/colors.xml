@@ -7,4 +7,12 @@
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+
+    <color name="red">#FF0D0D</color>
+    <color name="hint">#61122940</color>
+    <color name="title">#000000</color>
+    <color name="subTitle">#DE122940</color>
+    <color name="subTitle2">#99263238</color>
+    <color name="backgroundCard">#F8F8F8</color>
+
 </resources>
